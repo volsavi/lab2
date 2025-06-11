@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="uk" itemscope itemtype="https://schema.org/WebPage">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,12 +7,14 @@
   <meta name="keywords" content="бакалаврська робота, презентація, веб-сайт, студент" />
   <meta name="author" content="Ваше ім'я" />
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Бакалаврська робота" />
   <meta property="og:description" content="Односторінковий сайт для презентації бакалаврської роботи." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://your-domain.com/" />
   <meta property="og:image" content="https://your-domain.com/img/preview.png" />
 
+  <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -23,9 +25,9 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Бакалаврська робота</h1>
-    <nav>
+  <header role="banner">
+    <h1 itemprop="name">Бакалаврська робота</h1>
+    <nav role="navigation" aria-label="Головна навігація">
       <ul>
         <li><a href="#about">Про роботу</a></li>
         <li><a href="#structure">Структура</a></li>
@@ -34,25 +36,26 @@
     </nav>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>Про роботу</h2>
-      <p>Опис теми бакалаврської роботи, її актуальність і мета.</p>
+  <main id="main-content" role="main" itemprop="mainContentOfPage">
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">Про роботу</h2>
+      <p itemprop="description">Опис теми бакалаврської роботи, її актуальність і мета.</p>
+      <img src="img/project-image.jpg" alt="Ілюстрація до теми бакалаврської роботи" />
     </section>
 
-    <section id="structure">
-      <h2>Структура</h2>
+    <section id="structure" aria-labelledby="structure-heading">
+      <h2 id="structure-heading">Структура</h2>
       <p>Короткий опис розділів роботи.</p>
     </section>
 
-    <section id="results">
-      <h2>Результати</h2>
+    <section id="results" aria-labelledby="results-heading">
+      <h2 id="results-heading">Результати</h2>
       <p>Основні висновки, результати дослідження, реалізація.</p>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Ваше ім'я. Всі права захищено.</p>
+  <footer role="contentinfo">
+    <p>&copy; 2025 <span itemprop="author">Ваше ім'я</span>. Всі права захищено.</p>
   </footer>
 </body>
 </html>
